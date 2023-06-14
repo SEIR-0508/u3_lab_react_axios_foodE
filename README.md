@@ -2,6 +2,8 @@
 
 # FoodE, the Foodie's Best Friend
 
+[food](https://www.tapasmagazine.es/wp-content/uploads/2023/03/mykalekitchen-cuentas-foodie-instagram.jpg)
+
 ### Introduction
 
 - For our Unit 3 Hackathon we are going to get some practice in with React, building a Single Page Application that makes a call to a 3rd party API.
@@ -11,7 +13,7 @@
 ### Requirements
 
 - A React app connected to either DB using Axios, with useEffect and useState hooks used.
-- A search bar that allows users to search by ingredients
+- A search bar that allows users to search by recipes
 - At least 2 different pages linked through the React Router
 - Professional, Clean, Modern style
 
