@@ -2,7 +2,7 @@
 
 # FoodE, the Foodie's Best Friend
 
-[food](https://www.tapasmagazine.es/wp-content/uploads/2023/03/mykalekitchen-cuentas-foodie-instagram.jpg)
+![food](https://www.tapasmagazine.es/wp-content/uploads/2023/03/mykalekitchen-cuentas-foodie-instagram.jpg)
 
 ### Introduction
 
