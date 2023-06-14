@@ -16,9 +16,11 @@
 - A search bar that allows users to search by recipes
 - At least 2 different pages linked through the React Router
 - Professional, Clean, Modern style
+- Project deployed through either Surge or Netlify
 
 
 ### Presentation / Submission
 
 - Each group will be presenting within your Pod Thursday 6/29 at 11am EST
 - Presentations will be 5-10 minutes and should show the basics of your project, your biggest challenges and take aways
+- Deployed Links and Github Pages
