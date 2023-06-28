@@ -3,6 +3,8 @@ import Slider from './Slider';
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+    
     return (
     <div className="home">
 
