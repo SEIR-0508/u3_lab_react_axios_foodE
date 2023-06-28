@@ -10,7 +10,9 @@ const CocktailDetails = ({cocktails}) => {
         let selectedCocktail = cocktails.find(
             (cocktail) => cocktail.idDrink === parseInt(id)
         )
-        setCocktail(selectedCocktail)
+        if (selectedCocktail) {
+            setCocktail(selectedCocktail)
+        }
     }, [cocktails, id])
 
     if (cocktail) {

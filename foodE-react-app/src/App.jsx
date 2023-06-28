@@ -6,8 +6,8 @@ import Nav from "./components/Nav"
 import Home from "./components/Home"
 import Cocktails from "./components/Cocktails"
 import CocktailDetails from "./components/CocktailDetails"
-import Alcohols from "./components/Alcohols"
-import AlcoholDetails from "./components/AlcoholDetails"
+// import Alcohols from "./components/Alcohols"
+// import AlcoholDetails from "./components/AlcoholDetails"
 import { BASE_URL } from "./Globals"
 
 function App() {
@@ -20,19 +20,40 @@ function App() {
         getCocktails()
     }, [])
   
-  const [alcohols, setAlcohols] = useState([])
-  useEffect(() => {
-    const getAlcohols = async () => {
-      const response = await axios.get(`${BASE_URL}/list.php?i=list`)
-      setAlcohols(response.data.drinks)
+  // const [alcohols, setAlcohols] = useState([])
+  // useEffect(() => {
+  //   const getAlcohols = async () => {
+  //     const response = await axios.get(`${BASE_URL}/list.php?i=list`)
+  //     setAlcohols(response.data.drinks)
+  //   }
+  //   getAlcohols()
+  // }, [])
+
+  const initialSearchState = {
+    query: ""
+  }
+  const [searchState, setSearchState] = useState(initialSearchState)
+  
+    const handleChange = event => {
+      setSearchState({...searchState, [event.target.id]: event.target.value})
     }
-    getAlcohols()
-  }, [])
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(searchState)
+    setSearchState(initialSearchState)
+  }
 
     return (
         <div className='App'>
             <header>
-                <Nav />
+          <Nav />
+          <div className='search'>
+            <form onSubmit={handleSubmit} >
+              <input type='text' placeholder="search" id="query" onChange={handleChange} value={searchState.query} />
+              <button type='submit' >Search</button>
+            </form>
+            </div>
             </header>
             <main>
                 <Routes>
@@ -45,14 +66,14 @@ function App() {
                         path='/cocktails/:id'
                         element={<CocktailDetails cocktails={cocktails} />}
                     />
-                    <Route
+                    {/* <Route
                         path='/alcohols'
                         element={<Alcohols alcohols={alcohols} />}
                     />
                     <Route
                         path='/alcohols/:id'
                         element={<AlcoholDetails alcohols={alcohols} />}
-                    />
+                    /> */}
                 </Routes>
             </main>
         </div>

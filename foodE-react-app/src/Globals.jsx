@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://www.thecocktaildb.com/api/json/v1/1/search.php'
+export const BASE_URL = 'http://www.thecocktaildb.com/api/json/v1/1/'
