@@ -11,7 +11,7 @@ function App() {
 
   const getDrinkList = async() => {
     const response = await axios.get(`${ALLDRINKS}`)
-    console.log(response.data)
+    console.log(response.data.drinks)
     setDrinkList(response.data.drinks)
     console.log(drinkList)
   }
@@ -26,7 +26,7 @@ function App() {
         <Nav />
       </div>
       <div>
-        <Main/>
+        <Main drinks={drinkList}/>
       </div>
     </div>
   )
