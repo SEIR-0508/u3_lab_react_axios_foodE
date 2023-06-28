@@ -1,6 +1,7 @@
 import Home from './Components/Home'
 import DrinksList from './Components/DrinksList'
 import Drink from './Components/Drink'
+import SearchResults from './Components/SearchResults'
 
 import React from 'react'
 import axios from 'axios'
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/" element = {<Home />}/>
         <Route exact path="/drinks" element = {<DrinksList drinks={drinks}/>}/>
         <Route exact path="/drinks/:id" element = {<Drink />}/>
+        <Route exact path="/search/:id" element = {<SearchResults />}/>
       </Routes>
     </div>
   )
