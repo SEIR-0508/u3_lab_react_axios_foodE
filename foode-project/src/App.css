@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-size: 50px 50px;
+    background-color: #0ae;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+}
+
+.nav-items-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2.55rem;
+    background-color: rgba(255, 137, 157, 0.9);
+    box-shadow: 8px 8px 10px #0000008c;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.75rem;
+    background-color: #0ae;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 8px 8px 10px #0000008c;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    background-color: rgb(0, 0, 154);
+    box-shadow: 8px 8px 10px #ffffff8c;
+}
+
+.home-content-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 14rem;
+}
+
+.home-image {
+    width: 650px;
+    border-radius: 15px;
+    border: white solid 2px;
+    box-shadow: 8px 8px 10px #0000008c
+}
+
+.home-title {
+    background-color: rgb(255, 137, 157);
+    padding: 5rem;
+    border-radius: 15px;
+    border: double black;
+    color: white;
+    box-shadow: 8px 8px 10px #0000008c;
+    font-size: 3rem;
+}
+
+.drink-list-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 5rem;
+    text-shadow: 8px 8px 10px #0000008c;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    place-items: center center;
+    margin: 2rem 0;
+}
+
+.card {
+    padding: 2rem;
+    border: solid white 2px;
+    width: 60%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px #0000008c;
+    transition: 0.5s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+    box-shadow: 8px 8px 10px #ffffff8c;
+}
+
+.card-title {
+    margin-bottom: 1rem; 
+}
+
+.card-image {
+    width: 80%;
+    border-radius: 15px;
+    border: solid black 2px;
+}
