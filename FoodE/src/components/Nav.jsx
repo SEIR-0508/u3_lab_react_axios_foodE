@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { BASE_URL } from '../globals'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -27,6 +26,11 @@ export default function Nav () {
         getCategory()
     }, [])
 
+    let navigate = useNavigate()
+    const showLink = (name) => {
+        navigate(`${name}`)
+    }
+
     if (!glass.data || !spirit.data || !category.data) {
         return ( 
             <h1>Loading...</h1>
@@ -38,7 +42,7 @@ export default function Nav () {
                 <h3>Filter By Glass:</h3>
                 <div className="list">
                     {glass.data.drinks.map((myGlass, index) => [
-                        <p key={index}>{myGlass.strGlass}</p>
+                        <p key={index} onClick={() => showLink(myGlass.strGlass)}>{myGlass.strGlass}</p>
                     ])}
                 </div>
             </div>
@@ -46,7 +50,7 @@ export default function Nav () {
                 <h3>Filter By Spirit:</h3>
                 <div className="list">
                     {spirit.data.drinks.map((mySpirit, index) => [
-                        <p key={index}>{mySpirit.strIngredient1}</p>
+                        <p key={index} onClick={() => showLink(mySpirit.strIngredient1)}>{mySpirit.strIngredient1}</p>
                     ])}
                 </div>
             </div>
@@ -54,7 +58,7 @@ export default function Nav () {
                 <h3>Filter By Category:</h3>
                 <div className="list">
                     {category.data.drinks.map((myCategory, index) => [
-                        <p key={index}>{myCategory.strCategory}</p>
+                        <p key={index} onClick={() => showLink(myCategory.strCategory)}>{myCategory.strCategory}</p>
                     ])}
                 </div>
             </div>
