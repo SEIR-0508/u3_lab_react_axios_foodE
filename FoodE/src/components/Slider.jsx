@@ -12,6 +12,8 @@ import example from "../assets/Logo.png"
 function Slider() {
     return (
         <div className='slider-container'>
+            <h1 className='swiper-heading'>Featured Booze</h1>
+        
                 <Swiper
                 effect={ 'coverflow' }
                 grabCursor={ true }
@@ -40,7 +42,9 @@ function Slider() {
                 className='swiper-slider'>
 
                         <SwiperSlide className='swiper-slide'>Slide 1
+
                             <img src={example} alt="example" style={{width:300}}/>
+
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>Slide 2
