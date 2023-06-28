@@ -11,11 +11,11 @@ const Cocktails = () => {
     useEffect(()=> {
         const getCocktails = async (url) => {
             let response = await axios.get(url)
-            console.log(response)
-            drinks = response.data.drinks
+            let drinks = response.data.drinks
+            console.log(drinks)
             setCocktails(drinks)
         }
-        getCocktails(`www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
+        getCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
     }, [cocktails])
 
     console.log(cocktails)
@@ -31,8 +31,8 @@ const Cocktails = () => {
                 {
                     cocktails.map((cocktail, id) => (
                         <div key={id}  className="card">
-                            <h3>{cocktail.name}</h3>
-                            <img src={cocktail.strImageSource}/>
+                            <h3>{cocktail.strDrink}</h3>
+                            <img src={cocktail.strDrinkThumb}/>
                         </div>
                     ))
                 }
