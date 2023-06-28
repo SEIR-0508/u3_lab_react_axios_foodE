@@ -1,4 +1,7 @@
 
+import { BASE_URL } from "../globals"
+
+
 
 
 export default function Main () {
@@ -6,3 +9,4 @@ export default function Main () {
         <h1>Something extremely cool will go here!</h1>
     )
 }
+
