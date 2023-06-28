@@ -25,7 +25,8 @@ export default function Header () {
     const handleSubmit = e => {
         if (e.key === "Enter") {
             e.preventDefault()
-            navigate(`/cocktails/search/${e.target.value}`)
+            const capString = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)
+            navigate(`/cocktails/search/${capString}`)
             setSearchState(initialState)
         }
     }
