@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from './Slider';
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -11,14 +12,16 @@ const Home = () => {
     <h3 className='welcome-message'>Where sloppy code is NOT a problem</h3>
         
         <Slider/>
-        
+
         </div>
 
 
         <div className='featured-cocktails'>
     <h3 className='featured-message' id="fade">Featured</h3>
     <h2 className='featured-message'>Cocktails</h2>
-                <div className='cocktail-list'>
+                <div className='featured-cocktail-list'>
+
+
 
 
                 </div>
