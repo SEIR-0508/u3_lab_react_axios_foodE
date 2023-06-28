@@ -1,7 +1,5 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -58,6 +56,7 @@ p:hover {
 .search {
   margin-top: 20px;
   margin-left: 20px;
+  margin-right: 100px;
   background-color: rgb(249, 237, 226)
 }
 
@@ -70,8 +69,22 @@ body {
   margin-top: 100px;
 }
 
-header {
-  margin-left: 0;
+.individualDisplay {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
 }
+
+.additionalInfo {
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+.additionalInfo p:hover {
+  color: grey;
+  filter: none;
+}
+
 
 
