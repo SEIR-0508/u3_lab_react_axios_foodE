@@ -1,6 +1,6 @@
 import Home from './Components/Home'
 import DrinksList from './Components/DrinksList'
-import Drink from './Components/Drink'
+//import Drink from './Components/Drink'
 
 import React from 'react'
 import axios from 'axios'
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route exact path="/" element = {<Home />}/>
         <Route exact path="/drinks" element = {<DrinksList drinks={drinks}/>}/>
-        <Route exact path="/drinks/:id" element = {<Drink />}/>
+        {/* <Route exact path="/drinks/:id" element = {<Drink />}/> */}
       </Routes>
     </div>
   )
