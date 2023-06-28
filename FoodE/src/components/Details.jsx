@@ -9,9 +9,11 @@ const DetailsPage = (props) => {
     useEffect(()=> {
         const getCocktail = async () => {
             let response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
-            setCocktail(response.data.drinks)
+            setCocktail(response)
         }
     }, [cocktail, id])
+
+    console.log(cocktail)
 
     if (cocktail.length === 0) {
         return <h2>Loading...</h2>
@@ -19,7 +21,7 @@ const DetailsPage = (props) => {
         return (
             <div className="individualCard">
                 <h2 className="individualTitle">{cocktail.strDrink} </h2>
-                <div class="individualDisplay">
+                <div className="individualDisplay">
                     <div className="titleInfo">
                         <img src={cocktail.strImageSource}/>
                     </div>
@@ -33,7 +35,7 @@ const DetailsPage = (props) => {
                     <p><strong>Ingredient2:</strong> {cocktail.strIngredient2}</p>
                     <p><strong>Ingredient3:</strong> {cocktail.strIngredient3}</p>
                     <p><strong>Ingredient4:</strong> {cocktail.strIngredient4}</p>
-                    <Link class="goBack" to="/">Go home</Link>
+                    <Link className="goBack" to="/">Go home</Link>
                     </div>
                 </div>
             </div>
