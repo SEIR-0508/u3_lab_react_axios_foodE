@@ -42,7 +42,9 @@ function Slider() {
                 className='swiper-slider'>
 
                         <SwiperSlide className='swiper-slide'>Slide 1
-                            <img src={example} alt="example" style={{width:100}}/>
+
+                            <img src={example} alt="example" style={{width:300}}/>
+
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>Slide 2

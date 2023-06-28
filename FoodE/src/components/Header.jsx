@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Nav from './Nav'
 import logo from '../assets/logo.png'
@@ -19,16 +20,14 @@ export default function Header () {
 
 
     const [search, setSearchState] = useState(initialState)
+    let navigate = useNavigate()
 
     const handleSubmit = e => {
         if (e.key === "Enter") {
             e.preventDefault()
-            console.log(e.target.value)
+            navigate(`/cocktails/search/${e.target.value}`)
             setSearchState(initialState)
         }
-        // e.preventDefault()
-        // console.log(e.target.value)
-        // setSearchState(initialState)
     }
 
     const handleChange = e => {
