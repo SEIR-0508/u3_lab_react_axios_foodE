@@ -28,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cocktails" element={<Cocktails cocktails={cocktails} />} />
+          <Route path="/cocktails/:id" element={<Cocktails cocktails={cocktails} /> } />
           <Route path='/alcohols' element={<Alcohols />} />
         </Routes>
       </main>
