@@ -26,14 +26,15 @@
 }
 
 .list {
-  max-height: 100px;
+  max-height: 50px;
   overflow-x: auto;
   overflow-y: auto;
 }
 
 .Nav {
   border: 3px solid orange;
-  z-index: 1
+  z-index: 1;
+  margin-top: 65px;
 }
 
 .Nav p {
@@ -72,6 +73,7 @@ p:hover {
 body {
   background-color: rgb(249, 237, 226);
   color: grey;
+  margin-top: 25px;
 }
 
 .individualCard {
