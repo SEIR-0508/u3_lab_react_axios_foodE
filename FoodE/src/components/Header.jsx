@@ -14,16 +14,21 @@ export default function Header () {
             setIsActive(true)
         }
     }
-    const initialState = {
-        input: ''
-    }
+    const initialState = 'search'
+
+
 
     const [search, setSearchState] = useState(initialState)
 
     const handleSubmit = e => {
-        e.preventDefault()
-        console.log(e.target.value)
-        setSearchState(initialState)
+        if (e.key === "Enter") {
+            e.preventDefault()
+            console.log(e.target.value)
+            setSearchState(initialState)
+        }
+        // e.preventDefault()
+        // console.log(e.target.value)
+        // setSearchState(initialState)
     }
 
     const handleChange = e => {
@@ -36,7 +41,7 @@ export default function Header () {
         <div className="header">
             <Link to="/">Home</Link>
             <img src={logo} className="logo" onClick={logoClick}/>
-            <input type="search" placeholder="search" className="search" />
+            <input type="search" placeholder={initialState} className="search" onKeyPress={handleSubmit}  onChange={handleChange}/>
         </div>
         <div 
         style={{
