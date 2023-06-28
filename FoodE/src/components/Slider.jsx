@@ -8,6 +8,8 @@ import 'swiper/css/scrollbar';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper';
 import slide_1_image from "../assets/Kiwi.jpeg"
 import slide_2_image from "../assets/Bloody.jpeg"
+import slide_3_image from "../assets/Amaretto-Sour.jpeg"
+import slide_4_image from "../assets/Balmoral.jpeg"
 
 
 function Slider() {
@@ -51,11 +53,11 @@ function Slider() {
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
+                            <img src={slide_3_image} alt="image of a True Amaretto Sour" style={{width:300}}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
+                            <img src={slide_4_image} alt="image of a Balmoral" style={{width:300}}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
