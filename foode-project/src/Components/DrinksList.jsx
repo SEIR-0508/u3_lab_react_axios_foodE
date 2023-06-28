@@ -12,19 +12,23 @@ const DrinksList = (props) => {
     let navigate = useNavigate()
 
     const handleSearch= async () => {
-        try {
+        if(searchQuery !== '') {
             const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchQuery}`)
-            setSearchResults(response.data.drinks)
-        } catch (error) {
-            console.error('Could not find drink');
-        }
+            if(response.data.drinks !== null) {
+                setSearchResults(response.data.drinks)
+            } else {
+                alert(`We couldn't find that drink!`)
+                setSearchQuery('')
+            }
+            } else {
+                alert(`You have not entered anything to search!`)
+        } 
     }
 
     useEffect(() => {
-        console.log(searchResults)
         if(searchResults.length > 0) {
             navigate('/search/:id', { state: { results: searchResults } })
-        }
+        } 
     }, [searchResults, navigate])
 
 

@@ -28,9 +28,9 @@ const Drink = () => {
                         <p className="content-data">{drink.strGlass}</p>
                         <h3 className="content-title">Category:</h3>
                         <p className="content-data">{drink.strCategory}</p>
-                        <h3 className="content-title">Instructions:</h3>
-                        <p className="content-data">{drink.strInstructions}</p>
                     </div>
+                    <h3 className="content-title2">Instructions:</h3>
+                    <p className="content-data2">{drink.strInstructions}</p>
                 </div>
             </div>
         </div>

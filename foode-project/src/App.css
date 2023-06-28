@@ -89,6 +89,7 @@ body {
     background-color: rgba(255, 255, 255, .5);
     border-radius: 10px;
     box-shadow: 8px 8px 10px #0000008c;
+    margin-bottom: 2rem;
     transition: 0.5s;
 }
 
@@ -127,7 +128,7 @@ body {
 
 .drink-name {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     text-shadow: 8px 8px 10px #0000008c;
 }
@@ -186,4 +187,16 @@ body {
     cursor: pointer;
     box-shadow: 8px 8px 10px #ffffff8c;
     background-color: rgba(255, 255, 255);
+}
+
+.content-title2 {
+    text-align: center;
+}
+
+.content-data2 {
+    max-width: 500px;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    line-height: 1.5rem;
 }
