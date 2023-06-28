@@ -28,7 +28,7 @@ export default function Header () {
             display: isActive ? "" : "none"
         }}
         >
-            <Nav />
+            <Nav minimize={logoClick}/>
         </div>
         </div>
 

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
-export default function Nav () {
+export default function Nav (props) {
     const [glass, setGlass] = useState([])
     const [spirit, setSpirit] = useState([])
     const [category, setCategory] = useState([])
@@ -28,7 +28,8 @@ export default function Nav () {
 
     let navigate = useNavigate()
     const showLink = (name) => {
-        navigate(`${name}`)
+        navigate(`/cocktails/search/${name}`)
+        props.minimize()
     }
 
     if (!glass.data || !spirit.data || !category.data) {
