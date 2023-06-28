@@ -10,7 +10,7 @@ const Home = () => {
 
         <div className="cocktail-categories">
 
-    <h2 className='welcome-message'>Welcome to Boozy Coder</h2>
+    <h2 className='welcome-message'>Boozy Coder</h2>
     <h3 className='welcome-message'>Where sloppy code is NOT a problem</h3>
         
         <Slider/>

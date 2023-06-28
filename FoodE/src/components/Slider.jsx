@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper';
-import example from "../assets/Logo.png"
+import slide_1_image from "../assets/Logo.png"
 
 
 function Slider() {
@@ -41,23 +41,32 @@ function Slider() {
                 onSwiper={(swiper) => console.log(swiper)} 
                 className='swiper-slider'>
 
-                        <SwiperSlide className='swiper-slide'>Slide 1
-
-                            <img src={example} alt="example" style={{width:300}}/>
-
+                        <SwiperSlide className='swiper-slide'>
+                            <img src={slide_1_image} alt="example" style={{width:300}}/>
                         </SwiperSlide>
 
-                        <SwiperSlide className='swiper-slide'>Slide 2
-                            {/* <img src="" alt="" style={{width=100%}}/> */}
+                        <SwiperSlide className='swiper-slide'>
+                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
                         </SwiperSlide>
 
-                        <SwiperSlide className='swiper-slide'>Slide 3
-                            {/* <img src="" alt="" style={{width=100%}}/> */}
+                        <SwiperSlide className='swiper-slide'>
+                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
                         </SwiperSlide>
 
-                        <SwiperSlide className='swiper-slide'>Slide 4
-                            {/* <img src="" alt="" style={{width=100%}}/> */}
+                        <SwiperSlide className='swiper-slide'>
+                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
                         </SwiperSlide>
+
+                        <SwiperSlide className='swiper-slide'>
+                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
+                        </SwiperSlide>
+
+                        <SwiperSlide className='swiper-slide'>
+                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
+                        </SwiperSlide>
+
+                     
+
 
                         <div className='slider-controller'>
 
