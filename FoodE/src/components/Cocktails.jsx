@@ -37,13 +37,13 @@ const Cocktails = () => {
     } else {
         return (
             <div className="cocktails">
-                <h2>{cocktails.id} Cocktails</h2>
+                <h3>Cocktails</h3>
                 <div className="cocktail">
                 {
                     cocktails.map((cocktail, id) => (
-                        <div key={id}  className="card cocktailImage">
+                        <div key={id}  className="card">
                             <h3>{cocktail.strDrink}</h3>
-                            <img src={cocktail.strDrinkThumb}/>
+                            <img className="cocktailImages" src={cocktail.strDrinkThumb}/>
                         </div>
                     ))
                 }
