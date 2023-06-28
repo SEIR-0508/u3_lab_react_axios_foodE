@@ -49,9 +49,27 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .header .search {
   height: 25%;
+  float: right;
 }
+
+.list {
+  max-height: 100px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.Nav p {
+  display: inline-block;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
