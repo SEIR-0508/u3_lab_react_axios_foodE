@@ -6,13 +6,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper';
-import slide_1_image from "../assets/Logo.png"
+import slide_1_image from "../assets/Kiwi.jpeg"
+import slide_2_image from "../assets/Bloody.jpeg"
 
 
 function Slider() {
     return (
         <div className='slider-container'>
-            <h1 className='swiper-heading'>Featured Booze</h1>
+            <h2 className='swiper-heading'>Featured Booze</h2>
         
                 <Swiper
                 effect={ 'coverflow' }
@@ -42,11 +43,11 @@ function Slider() {
                 className='swiper-slider'>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_1_image} alt="example" style={{width:300}}/>
+                            <img src={slide_1_image} alt="image of Kiwi" style={{width:300}}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_1_image} alt="image of" style={{width:300}}/>
+                            <img src={slide_2_image} alt="image of Bloody" style={{width:300}}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
