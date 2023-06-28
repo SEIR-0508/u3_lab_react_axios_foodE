@@ -33,7 +33,6 @@ const DrinksList = (props) => {
 
 
     const showDrink = (key) => {
-        console.log(key)
         navigate(`${key}`)
     }
 

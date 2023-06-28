@@ -10,14 +10,11 @@ const SearchResults = () => {
     let navigate = useNavigate()
 
     const showDrink = (key) => {
-        console.log(key)
         navigate(`/drinks/${key}`)
     }
 
     const location = useLocation();
     const results = location.state.results;
-
-    console.log(results)
 
     return(
         <div className="drinks-page">
