@@ -15,7 +15,13 @@ const Cocktails = () => {
             console.log(drinks)
             setCocktails(drinks)
         }
-        getCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
+        if (id === "Gin" || id === "Rum" || id === "Whiskey" || id === "Scotch" || id === "Brandy" || id === "Vodka" || id === "Wine" || id === "Schnapps" || id === "Tequila" || id === "Champagne") {
+            getCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
+        } else if (id === "Highball_glass" || id === "Cocktail_glass" || id === "Old-Fashioned_glass" || id === "Whiskey_glass" || id === "Collins_glass" || id === "Pousse_cafe_glass" || id === "Champagne_flute" || id === "Whiskey_sour_glass" || id === "Cordial_glass" || id === "Brandy_snifter" || id === "White_wine_glass" || id === "Nick_and_nora_glass" || id === "Hurricane_glass" || id === "Coffee_mug" || id === "Shot_glass" || id === "Jar" || id === "Irish_coffee_cup" || id === "Punch_bowl" || id === "Pitcher" || id === "Pint_glass" || id === "Copper_mug" || id === "Wine_glass" || id === "Beer_mug" || id === "Margarita/Coupette_glass" || id === "Beer_pilsner" || id === "Beer_glass" || id === "Parfait_glass" || id === "Mason_jar" || id === "Margarita_glass" || id === "Martini_glass" || id === "Balloon_glass" || id === "Coupe_glass") {
+            getCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=${id}`)
+        } else {
+            getCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${id}`)
+        }
     }, [cocktails])
 
     console.log(cocktails)
