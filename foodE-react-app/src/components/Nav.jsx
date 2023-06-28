@@ -10,6 +10,9 @@ const Nav = () => {
                 <Link to="/cocktails"> Cocktails </Link>
                 <Link to="/alcohols"> Alcohols </Link>
             </div>
+            <div className='search'>
+                <input type='text' placeholder="search"></input>
+            </div>
         </nav>
     )
 }
