@@ -14,16 +14,29 @@ export default function Header () {
             setIsActive(true)
         }
     }
+    const initialState = {
+        input: ''
+    }
 
-    console.log(isActive)
+    const [search, setSearchState] = useState(initialState)
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log(e.target.value)
+        setSearchState(initialState)
+    }
+
+    const handleChange = e => {
+        setSearchState({...search, [e.target.id]: e.target.value})
+    }
 
 
     return (
-        <div className="outerHeader">
+        <div >
         <div className="header">
-            <Link to="/" onClick={logoClick}>Home</Link>
+            <Link to="/">Home</Link>
             <img src={logo} className="logo" onClick={logoClick}/>
-            <input type="search" className="search"/>
+            <input type="search" placeholder="search" className="search" />
         </div>
         <div 
         style={{
