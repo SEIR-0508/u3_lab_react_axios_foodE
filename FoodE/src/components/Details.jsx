@@ -27,7 +27,7 @@ const DetailsPage = (props) => {
                 <h2 className="individualTitle">{cocktail[0].strDrink} </h2>
                 <div className="individualDisplay">
                     <div className="titleInfo">
-                        <img src={cocktail[0].strDrinkThumb}/>
+                        <img class="cocktailImage" src={cocktail[0].strDrinkThumb}/>
                     </div>
                 <div className="additionalInfo">
                     <p><strong>Tags:</strong> {cocktail[0].strTags}</p>
