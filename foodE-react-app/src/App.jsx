@@ -37,20 +37,22 @@ function App() {
     const handleChange = event => {
       setSearchState({...searchState, [event.target.id]: event.target.value})
     }
-
+  let searchedQuery = ''
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(searchState)
+    // console.log(searchState)
+    searchedQuery = searchState
     setSearchState(initialSearchState)
+    console.log(searchedQuery)
   }
-
-    return (
-        <div className='App'>
+  
+  return (
+    <div className='App'>
             <header>
           <Nav />
           <div className='search'>
             <form onSubmit={handleSubmit} >
-              <input type='text' placeholder="search" id="query" onChange={handleChange} value={searchState.query} />
+              <input type='text' placeholder="feeling thirsty?" id="query" onChange={handleChange} value={searchState.query} />
               <button type='submit' >Search</button>
             </form>
             </div>
