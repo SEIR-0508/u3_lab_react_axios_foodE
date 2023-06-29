@@ -109,6 +109,7 @@ body {
   }
 
   .slider-controller {
+    padding: 5rem;
     position: relative;
     bottom: 2rem;
     display: flex;
