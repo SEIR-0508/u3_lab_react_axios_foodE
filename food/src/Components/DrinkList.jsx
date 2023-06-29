@@ -29,7 +29,7 @@ const DrinkList = (props) => {
       <div className="grid">
         <div>
           <form onSubmit={handleSubmit}>
-            <h1>Drinks List Here</h1>
+            
             <input
               type="input"
               value={input}
@@ -42,6 +42,7 @@ const DrinkList = (props) => {
 
         <div className="drinks-grid">
           {props.drinks.map((drink) => (
+            <div className="drinks-square">
             <div
               onClick={() => showDrink(drink)}
               key={drink.strDrink}
@@ -49,6 +50,7 @@ const DrinkList = (props) => {
             >
               <h3 className="drinks-grid-h3">{drink.strDrink}</h3>
               <p>{drink.strCategory}</p>
+            </div>
             </div>
           ))}
         </div>

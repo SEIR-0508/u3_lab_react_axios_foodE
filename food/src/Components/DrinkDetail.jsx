@@ -16,13 +16,13 @@ const DrinkDetail = ({drinks, setSearchQuery}) => {
     }, [drinks, strDrink])
 
     return drink ? (
-       <div>
+       <div className='drinkdetails'>
         <img src={drink.strDrinkThumb}/>
         <h3>{drink.strDrink}</h3>
         <p>{drink.strGlass}</p>
         <p>{drink.strInstructions}</p>
-        <p>Ingredients:</p>
-        <ul>
+        <p><strong>Ingredients:</strong></p>
+        <ul className='ingredients'>
             {Object.entries(drink)
             .filter(([key, value]) => key.startsWith('strIngredient') && value !== null)
             .map(([key, value]) => (

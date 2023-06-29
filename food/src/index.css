@@ -56,8 +56,8 @@ button:focus-visible {
 }
 
 img {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
 }
 
 .drinks-grid {
@@ -81,8 +81,34 @@ img {
   font-size: 30px;  
 }
 
+/* .home-nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;  
+} */
 
+.card:hover .drinks-grid-h3 {
+  color: rgba(246, 218, 61, 0.862); 
+}
 
+.card:hover p {
+  color: rgba(246, 218, 61, 0.862);
+}
+
+.drinks-square:hover {
+border: dotted rgb(14, 109, 84);
+}
+
+.ingredients {
+  list-style-type: none;
+}
+.drinkdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
