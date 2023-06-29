@@ -10,11 +10,8 @@ import slide_1_image from "../assets/Kiwi.jpeg"
 import slide_2_image from "../assets/Bloody.jpeg"
 import slide_3_image from "../assets/Amaretto-Sour.jpeg"
 import slide_4_image from "../assets/Balmoral.jpeg"
-<<<<<<< HEAD
 import slide_5_image from "../assets/Aperol.jpeg"
 import slide_6_image from "../assets/Espresso.jpeg"
-=======
->>>>>>> origin
 
 
 function Slider() {
