@@ -1,0 +1,129 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+}
+
+.card {
+  padding: 2em;
+}
+
+.logo {
+  width: 50px;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  position: absolute;
+  justify-content: right;
+  top: 0;
+  width: 100%;
+}
+
+.header .search {
+  height: 30%;
+}
+
+.list {
+  max-height: 50px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.Nav {
+  border: 3px solid orange;
+  z-index: 1;
+  margin-top: 65px;
+}
+
+.Nav p {
+  display: inline-block;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  z-index: 1
+}
+
+p:hover {
+  filter: drop-shadow(0 0 1em white);
+  color: blue;
+}
+
+
+.cocktailImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: right;
+  background-color: peachpuff;
+}
+
+.search {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 100px;
+  background-color: rgb(249, 237, 226);
+  border-radius: 5px;
+}
+
+body {
+  background-image: linear-gradient(peachpuff, white);
+  color: grey;
+  margin-top: 25px;
+  font-family: 'Marlowe', sans-serif;
+}
+
+.individualCard {
+  margin-top: 100px;
+}
+
+.individualDisplay {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+
+.additionalInfo {
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+.additionalInfo p:hover {
+  color: grey;
+  filter: none;
+}
+
+.cocktailImages {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.cocktail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+
+h3 {
+  color: grey;
+}
+
+.home {
+  margin-top: 50px;
+}
+
+.cocktails {
+  margin-top: 100px;
+}
+
+
+
