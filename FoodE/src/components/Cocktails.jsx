@@ -32,6 +32,15 @@ const Cocktails = () => {
         }
     }, [id])
 
+    let navigate = useNavigate()
+
+    const showDeats = (id) => {
+        navigate(`/cocktails/${id}`)
+    }
+    
+    console.log(cocktails)
+
+
     if (cocktails === undefined || cocktails.length === 0) {
         return <h2>Loading...</h2>
     } else {
@@ -43,7 +52,7 @@ const Cocktails = () => {
                     cocktails.map((cocktail, id) => (
                         <div key={id}  className="card">
                             <h3>{cocktail.strDrink}</h3>
-                            <img className="cocktailImages" src={cocktail.strDrinkThumb}/>
+                            <img className="cocktailImages" src={cocktail.strDrinkThumb} onClick={() => showDeats(cocktail.idDrink)}/>
                         </div>
                     ))
                 }
