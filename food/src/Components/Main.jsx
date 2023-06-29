@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import DrinkList from './DrinkList'
+import DrinkDetail from './DrinkDetail'
 
-const Main = ({drinks}) => {
+const Main = ({drinks, setSearchQuery}) => {
 
     return(
         <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/Drinks" element={<DrinkList drinks={drinks}/>}/>
+            <Route path="/Drinks" element={<DrinkList drinks={drinks} setSearchQuery={setSearchQuery}/>}/>
+            <Route path="/Drinks/:strDrink" element={<DrinkDetail drinks={drinks} setSearchQuery={setSearchQuery}/>}/>
         </Routes>
     )
 }

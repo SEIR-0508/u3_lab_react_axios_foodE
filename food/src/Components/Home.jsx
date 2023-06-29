@@ -1,8 +1,11 @@
+import Nav from "./Nav"
+
 const Home = () => { 
 
     return (
-        <div>
-            <p>this is home</p>
+        <div className="home-nav">
+            <Nav />
+            
         </div>
     )
 }
