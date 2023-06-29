@@ -13,8 +13,8 @@ const handleSubmit = (e) => {
 const handleChange = (e) => {
   setSearchTerm({ ...searchTerm, ['']: e.target.value  })
   
-  console.log(searchTerm[""].toLowerCase())
-props.setCocktail(props.cocktail.filter(drink=>drink.strDrink.toLowerCase().includes(searchTerm[""].toLowerCase())===true))
+  console.log(searchTerm.toLowerCase())
+props.setCocktail(props.cocktail.filter(drink=>drink.strDrink.toLowerCase().includes(searchTerm.toLowerCase())===true))
 };
 
 const getSearch = async () => {
@@ -30,14 +30,14 @@ setSearchTerm(response.data.drinks)
     <section className='section search'>
       <form className='search-form' >
         <div className='form-control'>
-          <label htmlFor='name'>Search for your poison of choice</label>
+          <label htmlFor='name'>Search For Your Happiness</label>
           <input 
             type='text'
             name='name'
             id='name'
             onChange={handleChange}
           />
-          <button onSubmit={handleSubmit}>Run It Back</button>
+          <button onSubmit={handleSubmit}>Press Me, You Know You Wanna</button>
         </div>
       </form> 
      

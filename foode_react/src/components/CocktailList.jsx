@@ -1,28 +1,6 @@
-import { useState, useEffect } from 'react'
-import SearchForm from '../components/SearchForm'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-export default function Cocktail () {
-
-  const showDrink = (drink) => {
-    
-  }
-
-const [cocktail, setCocktail ] = useState(null)
-
-useEffect(()=> {
-const getData = async () =>{
-const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
-
-console.log(response.data.drinks)
-setCocktail(response.data.drinks)
-
-}
-
-getData()
-
-}, [])
+export default function CocktailList ({cocktail}) {
 
 if (!cocktail) {
     return <h2> Loading, take a look at our drink menu</h2>
@@ -30,11 +8,9 @@ if (!cocktail) {
   
 return (  
    
-  <div className='cocktail'>
-    <SearchForm setCocktail={setCocktail} cocktail={cocktail}/>
-  <div className='img-container'>
-  <div className='cocktail-footer'>
-  </div>
+
+    
+ 
   <div className='cocktails-center'>
     {
       cocktail.map((cocktail)=>(
@@ -55,8 +31,7 @@ return (
         </Link>
           </div>
   </div>
-  </div>  
-</div>
+  
  
 )
 }}

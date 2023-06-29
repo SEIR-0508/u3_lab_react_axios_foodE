@@ -1,5 +1,4 @@
 import React from 'react'
-import Loading from '../components/Loading'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -62,8 +61,7 @@ const SingleCocktail = (props) => {
     getCocktail()
   }, [id])
   if (loading) {
-    return <Loading/>
-  }
+    return <p>Cocktails is on the way, chill</p>  }
   if (!cocktail) {
     return <h2 className='section-title'>no cocktail to display</h2>
   } else {
