@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+input {
+  padding: 0.5em;
+}
+
+.cocktail-card {
+  color: white;
+  text-shadow: 0 0 4px black;
+  padding: 1em;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
