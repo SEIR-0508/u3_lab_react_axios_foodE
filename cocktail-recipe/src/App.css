@@ -1,0 +1,147 @@
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.home-div {
+  display: flex;
+  justify-content: center;
+}
+.home-div h1 {
+  margin: 50px;
+  font-size: 50px;
+}
+
+.button-menu {
+  background-color: transparent;
+  color: #eee;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+  margin: 10px;
+  width: 25%;
+}
+
+button {
+  width: 100%;
+}
+
+.button-menu:hover {
+  background-color: #ccc;
+  color: black;
+  transform: scale(1.2);
+}
+
+/* .button-menu:active {
+  transform: scale(0.95);
+} */
+
+.grid-drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 66%;
+  height: 1000px;
+  overflow: auto;
+}
+
+.card {
+  padding: 1em;
+  width: 12em;
+  height: 15em;
+  background-color: rgb(107, 117, 152);
+  border-radius: 0.5em;
+  border: 1px solid white;
+  margin: 1em;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
+  color: white;
+  font-family: "Georgia";
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  opacity: 1;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 75%;
+  object-fit: center;
+  box-shadow: inset 0 0 1em rgb(0, 0, 0);
+  display: block;
+  margin: auto;
+}
+
+.detail-header img {
+  max-width: 100%;
+  max-height: 66%;
+  object-fit: center;
+  box-shadow: inset 0 0 1em rgb(0, 0, 0);
+  display: block;
+}
+
+h1 {
+  color: white;
+}
+
+.recipe-search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+  opacity: 0.8;
+  height: 75px;
+}
+
+.input-recipe-label {
+  font-size: xx-large;
+}
+.input-recipe-input {
+  width: 50%;
+  height: 50%;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.drink-detail-card {
+  padding: 1em;
+  width: 30em;
+  height: 100%;
+  background-color: rgb(107, 117, 152);
+  border-radius: 0.5em;
+  border: 1px solid white;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
+  color: white;
+  font-family: "Georgia";
+  cursor: pointer;
+  opacity: 0.95;
+}
+.drink-detail-card img {
+  max-width: 100%;
+  max-height: 75%;
+  object-fit: center;
+  box-shadow: inset 0 0 1em rgb(0, 0, 0);
+  display: block;
+  margin: auto;
+}
+
+.blur-body {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  transition: backdrop-filter 0.5s ease; /* Adjust the transition duration as needed */
+  -webkit-transition: backdrop-filter 0.5s ease; /* For Safari support */
+}
+
+.drinks-gallery {
+  display: flex;
+  flex-direction: row;
+}
