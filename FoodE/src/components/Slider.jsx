@@ -109,7 +109,7 @@ function Slider() {
 
 
                         </div>
-                ...
+                
             </Swiper>
       </div>
     )
