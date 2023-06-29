@@ -45,7 +45,7 @@ const Cocktails = () => {
     } else {
         return (
             <div className="cocktails">
-                <h3>Cocktails</h3>
+                <h3>{myString} Cocktails</h3>
                 <div className="cocktail">
                 {
                     cocktails.map((cocktail, id) => (
