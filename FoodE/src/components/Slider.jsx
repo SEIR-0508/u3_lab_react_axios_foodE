@@ -12,12 +12,20 @@ import slide_3_image from "../assets/Amaretto-Sour.jpeg"
 import slide_4_image from "../assets/Balmoral.jpeg"
 import slide_5_image from "../assets/Aperol.jpeg"
 import slide_6_image from "../assets/Espresso.jpeg"
+import { useNavigate, useParams } from 'react-router-dom'
 
 
 function Slider() {
+
+    let navigate = useNavigate()
+    const showDetails = (id) => {
+        navigate(`/cocktails/${id}`)
+    }
+
+
     return (
         <div className='slider-container'>
-            <h2 className='swiper-heading'>Featured Booze</h2>
+            <h2 className='swiper-heading'>Featured Cocktail</h2>
         
                 <Swiper
                 effect={ 'coverflow' }
@@ -47,27 +55,39 @@ function Slider() {
                 className='swiper-slider'>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_1_image} alt="image of Kiwi" style={{width:300}}/>
+                            <img src={slide_1_image} alt="image of Kiwi" style={{width:300}} onClick={()=> {
+                                showDetails(178359)
+                            }}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_2_image} alt="image of Bloody" style={{width:300}}/>
+                            <img src={slide_2_image} alt="image of Bloody" style={{width:300}} onClick={()=> {
+                                showDetails(178312)
+                            }}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_3_image} alt="image of a True Amaretto Sour" style={{width:300}}/>
+                            <img src={slide_3_image} alt="image of a True Amaretto Sour" style={{width:300}} onClick={()=> {
+                                showDetails(13731)
+                            }}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_4_image} alt="image of a Balmoral" style={{width:300}}/>
+                            <img src={slide_4_image} alt="image of a Balmoral" style={{width:300}} onClick={()=> {
+                                showDetails(11060)
+                            }}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_5_image} alt="image of a Aperol" style={{width:300}}/>
+                            <img src={slide_5_image} alt="image of a Aperol" style={{width:300}} onClick={()=> {
+                                showDetails(178325)
+                            }}/>
                         </SwiperSlide>
 
                         <SwiperSlide className='swiper-slide'>
-                            <img src={slide_6_image} alt="image of of a Espresso" style={{width:300}}/>
+                            <img src={slide_6_image} alt="image of of a Espresso" style={{width:300}} onClick={()=> {
+                                showDetails(17212)
+                            }}/>
                         </SwiperSlide>
 
                      
@@ -89,7 +109,7 @@ function Slider() {
 
 
                         </div>
-                ...
+                
             </Swiper>
       </div>
     )

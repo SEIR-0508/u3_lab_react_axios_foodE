@@ -6,10 +6,24 @@ import axios from 'axios'
 const DetailsPage = (props) => {
     const [cocktail, setCocktail] = useState('')
     let { id } = useParams()
+    let isNum = false
+    const containsNumbers = (id) => {
+        if (/\d/.test(id)) {
+            isNum = true
+        }
+    }
+    containsNumbers(id)
+    console.log(`${isNum} number or string`)
 
     useEffect(()=> {
         const getCocktail = async () => {
-            let response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+            let response = ""
+            if (isNum) {
+                response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+            } else {
+                response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${id}`)
+            }
+            
             console.log(response.data.drinks)
             setCocktail(response.data.drinks)
         }

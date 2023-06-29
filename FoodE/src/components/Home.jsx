@@ -17,19 +17,6 @@ const Home = () => {
 
         </div>
 
-
-        <div className='featured-cocktails'>
-    <h3 className='featured-message' id="fade">Featured</h3>
-    <h2 className='featured-message'>Cocktails</h2>
-                <div className='featured-cocktail-list'>
-
-
-
-
-                </div>
-
-        </div>
-
     </div>
 )}
 
