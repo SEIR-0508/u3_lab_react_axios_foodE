@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Drinks = ({ drinks, drink }) => {
+const Drinks = ({ drinks, drink, handleMouseEnter, handleMouseLeave }) => {
   let navigate = useNavigate();
 
   const showDrinkDetails = (id) => {
@@ -16,6 +16,8 @@ const Drinks = ({ drinks, drink }) => {
             className="card"
             onClick={() => showDrinkDetails(drink.idDrink)}
             key={drink.idDrink}
+            onMouseEnter={() => handleMouseEnter(drink.idDrink)}
+            onMouseLeave={handleMouseLeave}
           >
             <img src={drink.strDrinkThumb} alt="" />
             <h3>{drink.strDrink}</h3>

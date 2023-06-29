@@ -9,6 +9,8 @@ const SearchRecipe = () => {
   const [drink, setDrink] = useState("");
   const [drinkArray, setDrinkArray] = useState([]);
   const [isComponentVisible, setComponentVisible] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [drinkId, setDrinkId] = useState(0);
 
   const handleChange = (event) => {
     setDrink(event.target.value);
@@ -38,6 +40,17 @@ const SearchRecipe = () => {
     };
   }, [isComponentVisible]);
 
+  const handleMouseEnter = (key) => {
+    setIsHovered(true);
+    setDrinkId(key);
+    console.log("enter");
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    console.log("leave");
+  };
+
   return (
     <div className="search-recipe">
       <form onSubmit={handleSubmit} className="recipe-search-form">
@@ -52,8 +65,13 @@ const SearchRecipe = () => {
         />
       </form>
       <div className="drinks-gallery">
-        <Drinks drinks={drinkArray} drink={drink}></Drinks>
-        <DrinkDetails></DrinkDetails>
+        <Drinks
+          drinks={drinkArray}
+          drink={drink}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+        ></Drinks>
+        {isHovered ? <DrinkDetails id={drinkId}></DrinkDetails> : null}
       </div>
     </div>
   );

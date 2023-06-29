@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { LOOKUP_URL } from "../globals";
 import axios from "axios";
 
-const DrinkDetails = () => {
+const DrinkDetails = (props) => {
   let { id } = useParams();
+  !id ? (id = props.id) : "";
   const [drink, setDrink] = useState("");
   const [ingredients, setIngredients] = useState([]);
 
