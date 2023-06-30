@@ -1,10 +1,29 @@
 
-const Footer = () => {
+const Home = (props) => {
+  console.log(props)
    
     return (
-      <h2>  </h2>
+      <div className="serch-results">
+        {props.earchQuery.map((results) => {
+          <div key={results.strMeal}
+          className="queryResults-card">
+            <h2>{results.strMeal}</h2>
+            <p>{results.strCategory}</p>
+            <p>{results.strArea}</p>
+            <p>{results.strInstructions}</p>
+          </div>
+        }
+      
+        
+        )}
+
+
+      </div>
+
     )
     
-  }
+}
   
-  export default Footer
+
+
+  export default Home

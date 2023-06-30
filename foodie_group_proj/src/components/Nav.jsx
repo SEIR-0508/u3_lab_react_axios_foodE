@@ -1,33 +1,22 @@
 import { Link, useNavigate} from 'react-router-dom'
 import React, { useState } from 'react'
-import axios from 'axios'
 
-function Nav() {
+
+function Nav(props) {
 
     const [searchQuery, setSearchQuery] = useState('')
 
-    const navigate = useNavigate()
-
-        const handleSubmit = async (e) => {
-        
-            e.preventDefault()
-
-            try {
-                const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`)
-                console.log(response.data)
-                navigate(`/'search=${searchQuery}`)
-                } 
-                    catch (error) {
-                    console.error(error);
-                 } 
-               
-            }
-            
-                const handleChange = (e) => {
-                setSearchQuery(e.target.value)
-                }
-
     
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        props.handleSearch(searchQuery);
+      }
+    
+      const handleChange = (e) => {
+        setSearchQuery(e.target.value);
+      }
+       
         return (
 
         <div>
