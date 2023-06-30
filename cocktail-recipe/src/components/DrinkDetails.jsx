@@ -49,7 +49,7 @@ const DrinkDetails = (props) => {
   }, [drink]);
   //grab ingredients from response and format in neat array
 
-  return (
+  return drink ? (
     <div className="drink-detail-card">
       <img src={drink?.strDrinkThumb} alt="" />
       <h3>Ingredients:</h3>
@@ -59,7 +59,7 @@ const DrinkDetails = (props) => {
       <h3>Instructions:</h3>
       <p>{drink?.strInstructions}</p>
     </div>
-  );
+  ) : null;
 };
 
 export default DrinkDetails;
