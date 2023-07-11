@@ -1,4 +1,4 @@
-.Nav {
+/* .Nav {
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -11,9 +11,9 @@
 .home-div h1 {
   margin: 50px;
   font-size: 50px;
-}
+} */
 
-.button-menu {
+/* .button-menu {
   background-color: transparent;
   color: #eee;
   border: 1px solid white;
@@ -21,23 +21,23 @@
   transition: transform 0.2s ease;
   margin: 10px;
   width: 25%;
-}
+} */
 
-button {
+/* button {
   width: 100%;
-}
+} */
 
-.button-menu:hover {
+/* .button-menu:hover {
   background-color: #ccc;
   color: black;
   transform: scale(1.2);
-}
+} */
 
 /* .button-menu:active {
   transform: scale(0.95);
 } */
 
-.grid-drinks {
+/* .grid-drinks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -83,13 +83,13 @@ button {
   object-fit: center;
   box-shadow: inset 0 0 1em rgb(0, 0, 0);
   display: block;
-}
+} */
 
-h1 {
+/* h1 {
   color: white;
-}
+} */
 
-.recipe-search-form {
+/* #recipe-search-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +101,7 @@ h1 {
 .input-recipe-label {
   font-size: xx-large;
 }
-.input-recipe-input {
+#search-recipe {
   width: 50%;
   height: 50%;
   border: 2px solid white;
@@ -137,11 +137,11 @@ h1 {
 .blur-body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(8px); /* For Safari support */
-  transition: backdrop-filter 0.5s ease; /* Adjust the transition duration as needed */
-  -webkit-transition: backdrop-filter 0.5s ease; /* For Safari support */
+/* transition: backdrop-filter 0.5s ease; Adjust the transition duration as needed
+  -webkit-transition: backdrop-filter 0.5s ease; For Safari support
 }
 
 .drinks-gallery {
   display: flex;
   flex-direction: row;
-}
+}  */

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { BASE_URL } from "../globals";
 import Drinks from "./Drinks";
 import DrinkDetails from "./DrinkDetails";
+import { TextField, FormControl } from "@mui/material";
 
 const SearchRecipe = () => {
   const [drink, setDrink] = useState("");
@@ -53,17 +54,24 @@ const SearchRecipe = () => {
 
   return (
     <div className="search-recipe">
-      <form onSubmit={handleSubmit} className="recipe-search-form">
+      <FormControl onSubmit={handleSubmit} id="recipe-search-form">
         <label className="input-recipe-label">Search Drink:</label>
-        <input
+        {/* <input
           className="input-recipe-input"
           id="drink"
           type="text"
           onChange={handleChange}
           value={drink}
           placeholder="Enter a cocktail here.."
+        /> */}
+        <TextField
+          onChange={handleChange}
+          value={drink}
+          id="search-recipe"
+          variant="outlined"
+          color="primary"
         />
-      </form>
+      </FormControl>
       <div className="drinks-gallery">
         <Drinks
           drinks={drinkArray}
