@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { LOOKUP_URL } from "../globals";
 import axios from "axios";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Skeleton } from "@mui/material";
 
 const DrinkDetails = ({ id }) => {
   //let { id } = useParams();
@@ -64,7 +64,17 @@ const DrinkDetails = ({ id }) => {
       <Typography variant="h6">Instructions:</Typography>
       <Typography variant="p">{drink?.strInstructions}</Typography>
     </Container>
-  ) : null;
+  ) : (
+    <Container>
+      <Skeleton variant="text" sx={{ fontSize: "1rem" }} />{" "}
+      <Skeleton
+        animation="wave"
+        variant="text"
+        sx={{ fontSize: "1rem" }}
+        height={250}
+      />
+    </Container>
+  );
 };
 
 export default DrinkDetails;

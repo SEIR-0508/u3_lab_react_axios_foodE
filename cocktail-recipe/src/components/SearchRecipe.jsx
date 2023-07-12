@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { BASE_URL } from "../globals";
 import Drinks from "./Drinks";
 import DrinkDetails from "./DrinkDetails";
-import { TextField, FormControl, Container } from "@mui/material";
+import { TextField, FormControl, Container, Skeleton } from "@mui/material";
 
 const SearchRecipe = () => {
   const [drink, setDrink] = useState("");
@@ -67,12 +67,27 @@ const SearchRecipe = () => {
           fullWidth
         />
       </FormControl>
-      <Container className="drinks-gallery">
-        <Drinks drinks={drinkArray} drink={drink}></Drinks>
-        {isHovered ? <DrinkDetails id={drinkId}></DrinkDetails> : null}
-      </Container>
+      {drink.length > 0 ? (
+        <Container className="drinks-gallery">
+          <Drinks drinks={drinkArray} drink={drink}></Drinks>
+        </Container>
+      ) : (
+        <Container>
+          <Skeleton
+            animation="wave"
+            variant="text"
+            sx={{ fontSize: "1rem" }}
+            height={500}
+          />
+          <Skeleton
+            animation="wave"
+            variant="rectangular"
+            sx={{ fontSize: "1rem" }}
+            height={500}
+          />
+        </Container>
+      )}
     </Container>
   );
 };
-
 export default SearchRecipe;
