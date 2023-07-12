@@ -41,16 +41,16 @@ const SearchRecipe = () => {
     };
   }, [isComponentVisible]);
 
-  const handleMouseEnter = (key) => {
-    setIsHovered(true);
-    setDrinkId(key);
-    console.log("enter");
-  };
+  // const handleMouseEnter = (key) => {
+  //   setIsHovered(true);
+  //   setDrinkId(key);
+  //   console.log("enter");
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    console.log("leave");
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  //   console.log("leave");
+  // };
 
   return (
     <Container align="center" className="search-recipe" maxWidth="md">
@@ -68,12 +68,7 @@ const SearchRecipe = () => {
         />
       </FormControl>
       <Container className="drinks-gallery">
-        <Drinks
-          drinks={drinkArray}
-          drink={drink}
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-        ></Drinks>
+        <Drinks drinks={drinkArray} drink={drink}></Drinks>
         {isHovered ? <DrinkDetails id={drinkId}></DrinkDetails> : null}
       </Container>
     </Container>

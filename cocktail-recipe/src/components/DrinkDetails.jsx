@@ -3,10 +3,14 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { LOOKUP_URL } from "../globals";
 import axios from "axios";
+import { Container, Typography } from "@mui/material";
 
-const DrinkDetails = (props) => {
-  let { id } = useParams();
-  !id ? (id = props.id) : "";
+const DrinkDetails = ({ id }) => {
+  //let { id } = useParams();
+  //!id ? (id = props.id) : "";
+  //console.log(props);
+  //let id = props.id;
+  console.log(id);
   const [drink, setDrink] = useState("");
   const [ingredients, setIngredients] = useState([]);
 
@@ -35,6 +39,7 @@ const DrinkDetails = (props) => {
 
   const getDrinkRecipe = async () => {
     const response = await axios.get(`${LOOKUP_URL}i=${id}`);
+    console.log(response);
     setDrink(response.data.drinks[0]);
     console.log(ingredients);
   };
@@ -50,15 +55,15 @@ const DrinkDetails = (props) => {
   //grab ingredients from response and format in neat array
 
   return drink ? (
-    <div className="drink-detail-card">
-      <img src={drink?.strDrinkThumb} alt="" />
-      <h3>Ingredients:</h3>
+    <Container className="drink-detail-card">
+      {/* <img src={drink?.strDrinkThumb} alt="" /> */}
+      <Typography variant="h6">Ingredients:</Typography>
       {ingredients?.map((ingredient) => (
-        <h4>{ingredient}</h4>
+        <Typography variant="body2">{ingredient}</Typography>
       ))}
-      <h3>Instructions:</h3>
-      <p>{drink?.strInstructions}</p>
-    </div>
+      <Typography variant="h6">Instructions:</Typography>
+      <Typography variant="p">{drink?.strInstructions}</Typography>
+    </Container>
   ) : null;
 };
 
