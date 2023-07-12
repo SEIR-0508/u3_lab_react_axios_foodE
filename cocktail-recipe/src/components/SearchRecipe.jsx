@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { BASE_URL } from "../globals";
 import Drinks from "./Drinks";
 import DrinkDetails from "./DrinkDetails";
-import { TextField, FormControl } from "@mui/material";
+import { TextField, FormControl, Container } from "@mui/material";
 
 const SearchRecipe = () => {
   const [drink, setDrink] = useState("");
@@ -53,26 +53,21 @@ const SearchRecipe = () => {
   };
 
   return (
-    <div className="search-recipe">
-      <FormControl onSubmit={handleSubmit} id="recipe-search-form">
-        <label className="input-recipe-label">Search Drink:</label>
-        {/* <input
-          className="input-recipe-input"
-          id="drink"
-          type="text"
-          onChange={handleChange}
-          value={drink}
-          placeholder="Enter a cocktail here.."
-        /> */}
+    <Container align="center" className="search-recipe" maxWidth="md">
+      <FormControl onSubmit={handleSubmit} id="recipe-search-form" fullWidth>
         <TextField
           onChange={handleChange}
           value={drink}
           id="search-recipe"
           variant="outlined"
+          label="Search a drink"
           color="primary"
+          size="small"
+          margin="normal"
+          fullWidth
         />
       </FormControl>
-      <div className="drinks-gallery">
+      <Container className="drinks-gallery">
         <Drinks
           drinks={drinkArray}
           drink={drink}
@@ -80,8 +75,8 @@ const SearchRecipe = () => {
           handleMouseLeave={handleMouseLeave}
         ></Drinks>
         {isHovered ? <DrinkDetails id={drinkId}></DrinkDetails> : null}
-      </div>
-    </div>
+      </Container>
+    </Container>
   );
 };
 

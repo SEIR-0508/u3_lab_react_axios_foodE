@@ -20,23 +20,25 @@ import {
 const Nav = () => {
   return (
     <AppBar position="static">
-      <ButtonGroup
-        size="large"
-        variant="outlined"
-        aria-label="outlined button group"
-        color="secondary"
-        align="center"
-      >
-        <Link to="./">
-          <Button>Home</Button>
-        </Link>
-        <Link to="./generate">
-          <Button>Recipe Generator</Button>
-        </Link>
-        <Link to="./recipes">
-          <Button>Recipes</Button>
-        </Link>
-      </ButtonGroup>
+      <Container align="center">
+        <ButtonGroup
+          size="large"
+          variant="text"
+          aria-label="outlined button group"
+          color="secondary"
+          align="center"
+        >
+          <Link to="./">
+            <Button>Home</Button>
+          </Link>
+          <Link to="./generate">
+            <Button>Recipe Generator</Button>
+          </Link>
+          <Link to="./recipes">
+            <Button>Recipes</Button>
+          </Link>
+        </ButtonGroup>
+      </Container>
     </AppBar>
   );
 };

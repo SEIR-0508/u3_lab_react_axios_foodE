@@ -12,7 +12,7 @@ const theme = createTheme({
     },
     secondary: {
       // This is green.A700 as hex.
-      main: blue[200],
+      main: blue[800],
     },
   },
 });
