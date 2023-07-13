@@ -31,9 +31,9 @@ const Nav = () => {
           <Link to="./">
             <Button>Home</Button>
           </Link>
-          <Link to="./generate">
+          {/* <Link to="./generate">
             <Button>Recipe Generator</Button>
-          </Link>
+          </Link> */}
           <Link to="./recipes">
             <Button>Recipes</Button>
           </Link>
