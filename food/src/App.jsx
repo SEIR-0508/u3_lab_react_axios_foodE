@@ -3,7 +3,8 @@ import Main from "./Components/Main";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { ALLDRINKS } from "./globals";
-import Home from "./Components/Home";
+import Header from "./Components/Header"
+import Footer from "./Footer";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,7 +30,7 @@ function App() {
   return (
     <div className="app">
       <div>
-        <Home />
+        <Header />
       </div>
       <div>
         <Main
@@ -37,6 +38,9 @@ function App() {
           setDrinkList={setDrinkList}
           setSearchQuery={setSearchQuery}
         />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

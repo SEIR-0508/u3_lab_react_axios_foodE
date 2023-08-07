@@ -5,7 +5,7 @@ const Nav = () => {
         <div className='nav-links'>
             <Link to="/">Home</Link>
             <Link to="/Drinks">Drinks</Link>
-            <Link to="/Food">Food</Link>
+            {/* <Link to="/Food">Food</Link> */}
         </div>
     )
 }

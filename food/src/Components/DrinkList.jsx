@@ -35,8 +35,9 @@ const DrinkList = (props) => {
               value={input}
               onChange={handleChange}
               placeholder="Search drinks by name"
+              className="search"
             />
-            <button type="submit">search</button>
+            <button className="searchbutton" type="submit">search</button>
           </form>
         </div>
 

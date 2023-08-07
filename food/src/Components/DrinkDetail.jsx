@@ -21,7 +21,7 @@ const DrinkDetail = ({drinks, setSearchQuery}) => {
         <div>
         <NavLink to="/Drinks" className="back-link">Back</NavLink>
         </div>
-        <img src={drink.strDrinkThumb}/>
+        <img src={drink.strDrinkThumb} style={{ width: '400px', height: 'auto' }}/>
         <h3>{drink.strDrink}</h3>
         <p>{drink.strGlass}</p>
         <p>{drink.strInstructions}</p>

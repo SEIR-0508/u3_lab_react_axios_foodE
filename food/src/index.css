@@ -18,6 +18,7 @@ a {
   font-weight: 500;
   color: rgb(14, 109, 84);
   text-decoration: inherit;
+  margin-top: 10px;
 }
 a:hover {
   color: #dfb733;
@@ -29,12 +30,16 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("./assets/cocktail_header.jpg");
+  background-size: 600px 250px;
+  background-repeat: no-repeat;
+  background-position: center top 120px;
 }
 
-h1 {
+/* h1 {
   font-size: 3.2em;
-  line-height: 1.1;
-}
+  margin-bottom: 2px;
+} */
 
 button {
   border-radius: 8px;
@@ -55,13 +60,12 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-img {
-  width: 400px;
-  height: 400px;
+.drinkdetails {
+  margin-top: 150px;
 }
 
 .drinks-grid {
-  padding-top: 50px;
+  padding-top: 70px;
   display: grid;
   grid-template-columns: repeat(5, 200px);
   gap: 20px;
@@ -75,17 +79,63 @@ img {
   
 }
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  font-size: 30px;  
+.search {
+  margin-top: 200px;
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
 }
 
-/* .home-nav {
+.searchbutton {
+  font-size: 17px;
+  padding: 5px;
+  margin-left: 9px;
+  padding: 6px 8px;
+}
+
+.header-h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 50px; 
+  position: center fixed;
+  top: 10; /* Position it at the top of the viewport */
+  
+  width: 100%; /* Set the width to span the viewport */
+  z-index: 1; /* Optional: Adjust the z-index to ensure proper layering */
+}
+
+
+.home-h3 {
+  font-size: 18px; /* Adjust the font size */
+  line-height: 1.8; /* Improve line spacing for readability */
+  letter-spacing: 0.05em;
+  text-align: center; /* Center the text */
+  max-width: 900px; /* Set the maximum width for the paragraph */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 270px;
+  margin-bottom: 150px;
+}
+
+.nav-links {
   display: flex;
-  justify-content: space-around;
-  font-size: 30px;  
-} */
+  justify-content: center;
+  font-size: 25px;  
+  margin-top: 3px;
+  margin-right: 10px;
+  position: center fixed;
+  top: 10;
+ 
+}
+
+
+.nav-links a {
+  margin: 20px;
+  margin-top: 3px;
+}
+
+.drinks-grid {
+  margin-top: 10px;
+}
 
 .card:hover .drinks-grid-h3 {
   color: rgba(246, 218, 61, 0.862); 
@@ -102,6 +152,7 @@ border: dotted rgb(14, 109, 84);
 .ingredients {
   list-style-type: none;
 }
+
 .drinkdetails {
   display: flex;
   flex-direction: column;
@@ -109,6 +160,23 @@ border: dotted rgb(14, 109, 84);
   align-items: center;
   text-align: center;
 }
+
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  border-top: 1.5px solid black;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -118,6 +186,6 @@ border: dotted rgb(14, 109, 84);
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: lightgray;
   }
 }
