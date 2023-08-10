@@ -49,6 +49,7 @@ const DrinkList = (props) => {
               key={drink.strDrink}
               className="card"
             >
+              <img src={drink.strDrinkThumb} style={{ width: '200px', height: '200px' }}/>
               <h3 className="drinks-grid-h3">{drink.strDrink}</h3>
               <p>{drink.strCategory}</p>
             </div>
