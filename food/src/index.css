@@ -1,3 +1,4 @@
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +14,38 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.footer h5 {
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  
+}
+
+.footer::before {
+  content: ' ';
+  position: absolute;
+  top: 50%; /* Position it at the vertical center of the .footer element */
+  left: 50%; /* Position it at the horizontal center of the .footer element */
+  transform: translate(-50%, -50%); /* Center it precisely */
+  width: 2000px; /* Set the width to 1000px */
+  border-top: 1.5px solid black;
+  margin-top: 30px; /* Add margin at the top of the line */
+  margin-bottom: 5px;
+}
+
+.ingredients {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0px;
+}
+
 
 a {
   font-weight: 500;
@@ -33,7 +66,8 @@ body {
   background-image: url("./assets/cocktail_header.jpg");
   background-size: 600px 250px;
   background-repeat: no-repeat;
-  background-position: center top 120px;
+  background-position: center top 160px;
+ 
 }
 
 /* h1 {
@@ -59,9 +93,82 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.back-link {
+  display: inline-block; /* Make sure the element takes up only the necessary width */
+  border: 2px solid #333; /* Border with 2px width and solid color */
+  border-radius: 10px; /* Rounded corners with 10px radius */
+  padding: 3px 12px; /* Add padding around the content inside the element */
+  text-decoration: none; /* Remove the default underline for links */
+  color: #333; /* Text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  margin-bottom: 40px;
+  margin-top: 60px;
+
+}
+
+.back-link:hover {
+  background-color: #333; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.back-link-top {
+  display: inline-block; /* Make sure the element takes up only the necessary width */
+  border: 2px solid #333; /* Border with 2px width and solid color */
+  border-radius: 10px; /* Rounded corners with 10px radius */
+  padding: 3px 12px; /* Add padding around the content inside the element */
+  text-decoration: none; /* Remove the default underline for links */
+  color: #333; /* Text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  margin-bottom: 30px;
+  margin-top: 0px;
+
+}
+
+.back-link-top:hover {
+  background-color: #333; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.discover {
+  display: inline-block; /* Make sure the element takes up only the necessary width */
+  border: 2px solid #333; /* Border with 2px width and solid color */
+  border-radius: 10px; /* Rounded corners with 10px radius */
+  padding: 3px 12px; /* Add padding around the content inside the element */
+  text-decoration: none; /* Remove the default underline for links */
+  color: #333; /* Text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  margin-bottom: 140px;
+  margin-top: 0px;
+
+}
+
+.discover:hover {
+  background-color: #333; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.drinkdetails img {
+  width: 350px;
+  height: auto;
+}
+
+.dd-h2 {
+align-content: center;
+align-items: center;
+}
 
 .drinkdetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 150px;
+  width: 350px;
+}
+
+.dd-p {
+  display: inline-block;
+  justify-content: left;
 }
 
 .drinks-grid {
@@ -72,6 +179,8 @@ button:focus-visible {
   justify-content: center;
 }
 
+
+
 .drinks-grid-h3 {
   font-size: 22px;
   color: black;
@@ -80,7 +189,7 @@ button:focus-visible {
 }
 
 .search {
-  margin-top: 200px;
+  margin-top: 250px;
   width: 200px;
   padding: 5px;
   font-size: 16px;
@@ -113,7 +222,7 @@ button:focus-visible {
   max-width: 900px; /* Set the maximum width for the paragraph */
   margin: 0 auto; /* Center the container horizontally */
   margin-top: 270px;
-  margin-bottom: 150px;
+  margin-bottom: 40px;
 }
 
 .nav-links {
@@ -124,7 +233,6 @@ button:focus-visible {
   margin-right: 10px;
   position: center fixed;
   top: 10;
- 
 }
 
 
@@ -174,32 +282,14 @@ button:focus-visible {
 border: dotted rgb(14, 109, 84);
 } */
 
-.ingredients {
-  list-style-type: none;
-}
-
 .drinkdetails {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.footer {
-  width: 100%;
-  padding: 10px 0;
-  text-align: center;
-  position: relative;
-}
-
-.footer::before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  border-top: 1.5px solid black;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  margin-top: 270px;
+  margin-bottom: 90px;
 }
 
 @media (prefers-color-scheme: light) {

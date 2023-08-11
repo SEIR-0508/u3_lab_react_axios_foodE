@@ -19,14 +19,20 @@ const DrinkDetail = ({drinks, setSearchQuery}) => {
     return drink ? (
        <div className='drinkdetails'>
         <div>
-        <NavLink to="/Drinks" className="back-link">Back</NavLink>
+        <NavLink to="/Drinks" className="back-link-top">Back</NavLink>
         </div>
-        <img src={drink.strDrinkThumb} style={{ width: '400px', height: 'auto' }}/>
-        <h3>{drink.strDrink}</h3>
-        <p>{drink.strGlass}</p>
-        <p>{drink.strInstructions}</p>
-        <p><strong>Ingredients:</strong></p>
+        <img 
+            src={drink.strDrinkThumb} 
+            style={{ width: '350px', height: 'auto' }}
+            className='dd-img'
+            />
+        <h2 className='dd-h2'>{drink.strDrink}</h2>
+        <div className='dd-left-align'>
+        <p><strong>Served in a: </strong> {drink.strGlass}</p>
+        <p><strong>How to make: </strong>{drink.strInstructions}</p>
+        
         <ul className='ingredients'>
+        <strong>Ingredients:</strong>
         {Object.entries(drink)
         .filter(([key, value]) => key.startsWith('strIngredient') && value !== null)
         .map(([key, ingredient]) => {
@@ -38,7 +44,11 @@ const DrinkDetail = ({drinks, setSearchQuery}) => {
                 </li>
             );
         })}
-    </ul>
+        </ul>
+        </div>
+        <div>
+        <NavLink to="/Drinks" className="back-link">Back</NavLink>
+        </div>
        </div>
         
       ) : null;
